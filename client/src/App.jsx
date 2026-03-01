@@ -17,27 +17,56 @@ function App() {
     <BrowserRouter>
       <AuthProvider>
         <Routes>
-          <Route path="/" element={<Login />} />
-          <Route path="/register" element={<Register />} />
+  <Route path="/" element={<Login />} />
+  <Route path="/register" element={<Register />} />
 
-          <Route path="/dashboard"
-            element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
+  <Route
+    path="/dashboard"
+    element={
+      <ProtectedRoute>
+        <Dashboard />
+      </ProtectedRoute>
+    }
+  />
 
-          <Route path="/builder"
-            element={<ProtectedRoute><ResumeBuilder /></ProtectedRoute>} />
+  <Route
+    path="/builder"
+    element={
+      <ProtectedRoute>
+        <ResumeBuilder />
+      </ProtectedRoute>
+    }
+  />
 
-          <Route path="/pricing"
-            element={<ProtectedRoute><Pricing /></ProtectedRoute>} />
+  <Route
+    path="/pricing"
+    element={
+      <ProtectedRoute>
+        <Pricing />
+      </ProtectedRoute>
+    }
+  />
 
-          <Route path=”/job-matcher”
-            element={<ProtectedRoute><JobMatcher /></ProtectedRoute>} />
+  <Route
+    path="/job-matcher"
+    element={
+      <ProtectedRoute>
+        <JobMatcher />
+      </ProtectedRoute>
+    }
+  />
 
-          <Route path=”/cover-letter” 
-            element={<ProtectedRoute><CoverLetterGenerator /></ProtectedRoute>} />
+  <Route
+    path="/cover-letter"
+    element={
+      <ProtectedRoute>
+        <CoverLetterGenerator />
+      </ProtectedRoute>
+    }
+  />
 
-          <Route path="*" element={<NotFound />} />
-          
-        </Routes>
+  <Route path="*" element={<NotFound />} />
+</Routes>
       </AuthProvider>
     </BrowserRouter>
   )
