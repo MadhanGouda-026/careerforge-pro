@@ -15,14 +15,27 @@ export const AuthProvider = ({ children }) => {
   }
 
   const register = async (name, email, password) => {
+  try {
+    console.log("Sending request to backend...")
+
     const { data } = await API.post("/auth/register", {
       name,
       email,
       password
     })
+
+    console.log("Register success:", data)
+
     localStorage.setItem("user", JSON.stringify(data))
     setUser(data)
+
+  } catch (err) {
+    console.log("Register error:", err)
+    console.log("Error response:", err.response?.data)
+
+    alert(JSON.stringify(err.response?.data || err.message))
   }
+}
 
   const logout = () => {
     localStorage.removeItem("user")
