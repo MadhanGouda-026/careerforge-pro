@@ -27,6 +27,13 @@ function App() {
 
           <Route path="/pricing"
             element={<ProtectedRoute><Pricing /></ProtectedRoute>} />
+
+          <Route path=”/job-matcher”
+            element={<ProtectedRoute><JobMatcher /></ProtectedRoute>} />
+
+          <Route path=”/cover-letter” 
+            element={<ProtectedRoute><CoverLetterGenerator /></ProtectedRoute>} />
+
         </Routes>
       </AuthProvider>
     </BrowserRouter>
