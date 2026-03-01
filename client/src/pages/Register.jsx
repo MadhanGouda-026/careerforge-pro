@@ -8,10 +8,10 @@ const Register = () => {
   const [form, setForm] = useState({ name: "", email: "", password: "" })
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
-    await register(form.name, form.email, form.password)
-    navigate("/dashboard")
-  }
+  e.preventDefault()
+  console.log("Submit clicked")
+  await register(form.name, form.email, form.password)
+}
 
   return (
     <div className="flex items-center justify-center h-screen">
