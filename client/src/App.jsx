@@ -10,6 +10,7 @@ import Pricing from "./pages/Pricing"
 
 import JobMatcher from "./pages/JobMatcher"
 import CoverLetterGenerator from "./pages/CoverLetterGenerator"
+import NotFound from "./pages/NotFound"
 
 function App() {
   return (
@@ -34,6 +35,8 @@ function App() {
           <Route path=”/cover-letter” 
             element={<ProtectedRoute><CoverLetterGenerator /></ProtectedRoute>} />
 
+          <Route path="*" element={<NotFound />} />
+          
         </Routes>
       </AuthProvider>
     </BrowserRouter>
