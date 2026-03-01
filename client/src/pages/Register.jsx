@@ -31,7 +31,9 @@ const Register = () => {
           placeholder="Password"
           onChange={(e) => setForm({ ...form, password: e.target.value })} />
 
-        <button className="w-full bg-blue-600 text-white py-2 rounded-xl">
+        <button
+           type="submit"
+           className="w-full bg-blue-600 text-white py-2 rounded-xl">
           Register
         </button>
       </form>
