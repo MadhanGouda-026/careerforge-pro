@@ -8,6 +8,9 @@ import Dashboard from "./pages/Dashboard"
 import ResumeBuilder from "./pages/ResumeBuilder"
 import Pricing from "./pages/Pricing"
 
+import JobMatcher from "./pages/JobMatcher"
+import CoverLetterGenerator from "./pages/CoverLetterGenerator"
+
 function App() {
   return (
     <BrowserRouter>
